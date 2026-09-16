@@ -16,17 +16,17 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="index.html">Fluxo<span class="logo-dot">.</span></a>
+      <a class="logo" href="{% url 'home' %}">Fluxo<span class="logo-dot">.</span></a>
 
       <nav class="site-nav">
         <ul>
-          <li><a href="index.html"{% if request.resolver_match.url_name == "home" %} class="active"{% endif %}>Home</a></li>
-          <li><a href="portfolio.html"{% if request.resolver_match.url_name == "portfolio" %} class="active"{% endif %}>Portfólio</a></li>
+          <li><a href="{% url 'home' %}"{% if request.resolver_match.url_name == "home" %} class="active"{% endif %}>Home</a></li>
+          <li><a href="{% url 'portfolio' %}"{% if request.resolver_match.url_name == "portfolio" %} class="active"{% endif %}>Portfólio</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <a class="btn btn-outline" href="index.html#contato">Fale conosco</a>
+        <a class="btn btn-outline" href="{% url 'home' %}#contato">Fale conosco</a>
       </div>
     </div>
   </header>
@@ -39,17 +39,17 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="logo" href="index.html">Fluxo<span class="logo-dot">.</span></a>
+          <a class="logo" href="{% url 'home' %}">Fluxo<span class="logo-dot">.</span></a>
           <p>Estúdio criativo independente, especializado em branding e produto digital.</p>
         </div>
 
         <div class="footer-col">
           <h4>Navegação</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfólio</a></li>
-            <li><a href="index.html#sobre">Sobre</a></li>
-            <li><a href="index.html#contato">Contato</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'portfolio' %}">Portfólio</a></li>
+            <li><a href="{% url 'home' %}#sobre">Sobre</a></li>
+            <li><a href="{% url 'home' %}#contato">Contato</a></li>
           </ul>
         </div>
 
